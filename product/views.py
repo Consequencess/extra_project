@@ -5,6 +5,7 @@ from rest_framework.viewsets import ModelViewSet
 from product.models import Category, Product
 from product.serializers import CategorySerializer, ProductSerializer
 import logging
+from django.views.generic import ListView
 
 logger = logging.getLogger(__name__)
 
@@ -26,3 +27,9 @@ def get_hello(request):
     logger.error(request.user)
     # print(request.hello)
     return Response('Hello!')
+
+
+class ProductTemplateList(ListView):
+    model = Product
+    template_name = 'product_list.html'
+    context_object_name = 'products'
