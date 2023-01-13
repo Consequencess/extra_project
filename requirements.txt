@@ -1,0 +1,8 @@
+django
+djangorestframework
+psycopg2-binary
+pillow 
+djangorestframework-simplejwt
+django-cors-headers
+pyngrok==5.0.5
+python-decouple
